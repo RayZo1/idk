@@ -1,5 +1,6 @@
 local Player = game.Players.LocalPlayer
-if game.Players.LocalPlayer.UserId == 1809198971 then
+if game.Players.LocalPlayer.UserId == 1809198971 or 
+    game.Players.LocalPlayer.UserId == 2702693297 then
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
     else
     Player:Kick("Dont waste your time asking for whitelist.")
