@@ -1,5 +1,5 @@
 local Player = game.Players.LocalPlayer
-if loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/user/main/whitelisted'),true))() then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/user/main/whitelisted'),true))()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
     else
     Player:Kick("Dont waste your time asking for whitelist.")
