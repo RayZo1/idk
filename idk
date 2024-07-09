@@ -7,10 +7,10 @@ local Library = {};
 local Library = {
 	Open = true;
 	Folders = {
-		main = "Cold";
-		configs = "Cold/Configs";
+		main = "Eternity";
+		configs = "Eternity/Configs";
 	};
-	Accent = Color3.fromRGB(132,108,188);
+	Accent = Color3.fromRGB(132,0,188);
 	Pages = {};
 	Sections = {};
 	Flags = {};
@@ -4789,8 +4789,8 @@ do
 		do 
 			utility.drawings["Tracer"] = utility:drawObject("Line", {})
 			utility.drawings["Aim Assist FOV"] = utility:drawObject("Circle", {Visible = false, Radius = 8, Color = Color3.fromRGB(0,0,0), Filled = false})
-			utility.drawings["Sub"] = utility:drawObject("Text", {Outline = true, Text = "lunar", Color = Color3.new(1, 1, 1), Size = 13})
-			utility.drawings["Domain"] = utility:drawObject("Text", {Outline = true, Text = ".vip", Color = Color3.fromRGB(132, 108, 188), Size = 13})
+			utility.drawings["Sub"] = utility:drawObject("Text", {Outline = true, Text = "Eternity", Color = Color3.new(1, 1, 1), Size = 13})
+			utility.drawings["Domain"] = utility:drawObject("Text", {Outline = true, Text = ".gg", Color = Color3.fromRGB(132, 108, 188), Size = 13})
 			--
 			for i,v in pairs(bodyClone:GetDescendants()) do 
 				if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then 
@@ -4837,16 +4837,14 @@ do
 						"YoUr A BoOt",
 						"keep Trying You Jobby",
 					},
-					["Lunar"] = {
-						"Owned By Lunar",
-						"Lunar Lunar Lunar RAHHHHH",
-						"Slammed by Lunar",
-						"YOU GOT SLAMMED BY LUNAR",
-						"SEEMS LIKE YOU NEED LUNAR GG/LUNARVIP",
-						"GG/LUNARVIP GG/LUNARVIP GG/LUNARVIP",
-						"GG/LUNARVIP <-- THIS WILL LET YOU COPE WITH YOUR ISSUES",
-						"WHAT YOU CANT BEAT LUNAR?",
-						"PRO TIP: BUY LUNAR",
+					["Eternity"] = {
+						"Owned By Eternity",
+						"Eternity Eternity Eternity RAHHHHH",
+						"Slammed by Eternity",
+						"YOU GOT SLAMMED BY ETERNITY",
+						"SEEMS LIKE YOU NEED ETERNITY!",
+						"WHAT YOU CANT BEAT ETERNITY?",
+						"PRO TIP: BUY ETERNITY",
 					},
 				}
 				utx = {
@@ -5616,7 +5614,7 @@ local Window = Library:Window({Size = UDim2.new(0,580,0,600)}) do
 		-- 
 		local chatSpam = Movement:Section({Name = "Chat Spam", Size = 330, Side = "Left"}) do
 			chatSpam:Toggle({Name = "Enabled", Flag = "Chat Spam"})
-			chatSpam:Dropdown({Name = "Type", Flag = "Chat Spam Type", Options = {"Lunar", "Scottish"}, Default = "Lunar"})
+			chatSpam:Dropdown({Name = "Type", Flag = "Chat Spam Type", Options = {"Eternity", "Scottish"}, Default = "Eternity"})
 			chatSpam:Slider({Name = "Delay", Flag = 'Chat Spam Delay', Suffix = "s", Min = 0.1, Max = 10.0, Default = 5.0, Decimals = 0.1})
 			chatSpam:Toggle({Name = "Symbols", Flag = "Symbol"})
 			chatSpam:Toggle({Name = "Repeat", Flag = "Repeat"})
@@ -5692,16 +5690,16 @@ local Window = Library:Window({Size = UDim2.new(0,580,0,600)}) do
 		Cfgs:Textbox({Flag = "SettingsConfigurationName", Placeholder = "Config name"})
 		--
 		local CurrentList = {};
-		if not isfolder("Lunar") then 
-			makefolder("Lunar")
+		if not isfolder("Eternity") then 
+			makefolder("Eternity")
 		end 
-		if not isfolder("Lunar/Configs") then 
-			makefolder("Lunar/Configs")
+		if not isfolder("Eternity/Configs") then 
+			makefolder("Eternity/Configs")
 		end 
 		local function UpdateConfigList()
 			local List = {};
-			for idx, file in ipairs(listfiles("Lunar/Configs")) do
-				local FileName = file:gsub("Lunar/Configs\\", ""):gsub(".cfg", "")
+			for idx, file in ipairs(listfiles("Eternity/Configs")) do
+				local FileName = file:gsub("Eternity/Configs\\", ""):gsub(".cfg", "")
 				List[#List + 1] = FileName;
 			end;
 
@@ -5723,28 +5721,28 @@ local Window = Library:Window({Size = UDim2.new(0,580,0,600)}) do
 		--
 		Cfgs:Button({Name = "Create", Callback = function()
 			local ConfigName = flags.SettingsConfigurationName;
-			if ConfigName == "" or isfile("Lunar/Configs/" .. ConfigName .. ".cfg") then
+			if ConfigName == "" or isfile("Eternity/Configs/" .. ConfigName .. ".cfg") then
 				return;
 			end;
-			writefile("Lunar/Configs/" .. ConfigName .. ".cfg", Library:GetConfig());
+			writefile("Eternity/Configs/" .. ConfigName .. ".cfg", Library:GetConfig());
 			UpdateConfigList();
 		end})
 		Cfgs:Button({Name = "Save", Callback = function()
 			local SelectedConfig = flags.SettingConfigurationList;
 			if SelectedConfig then
-				writefile("Lunar/Configs/" .. SelectedConfig .. ".cfg", Library:GetConfig())
+				writefile("Eternity/Configs/" .. SelectedConfig .. ".cfg", Library:GetConfig())
 			end;
 		end})
 		Cfgs:Button({Name = "Load", Callback = function()
 			local SelectedConfig = flags.SettingConfigurationList;
 			if SelectedConfig then
-				Library:LoadConfig(readfile("Lunar/Configs/" .. SelectedConfig .. ".cfg"))
+				Library:LoadConfig(readfile("Eternity/Configs/" .. SelectedConfig .. ".cfg"))
 			end
 		end})
 		Cfgs:Button({Name = "Delete", Callback = function()
 			local SelectedConfig = flags.SettingConfigurationList;
 			if SelectedConfig then
-				delfile("Lunar/Configs/" .. SelectedConfig .. ".cfg")
+				delfile("Eternity/Configs/" .. SelectedConfig .. ".cfg")
 			end
 			UpdateConfigList();
 		end})
@@ -6243,5 +6241,6 @@ do
 	end 	
 end 
 
-Library:Notification("Loaded Cash in " .. Floor((tick() - loadingTime) * 1000)  .."ms", 3, Library.Accent, flags["Notification Position"])
-Library:Notification("Thanks for choosing Cash.", 3, Library.Accent, 5, Color3.new(1, 0, 0), flags["Notification Position"])
+Library:Notification("Loaded Eternity in " .. Floor((tick() - loadingTime) * 1000)  .."ms", 3, Library.Accent, flags["Notification Position"])
+Library:Notification("Thanks for choosing Eternity.", 3, Library.Accent, 5, Color3.new(1, 0, 0), flags["Notification Position"])
+print("Life's good with the real DEAL")
