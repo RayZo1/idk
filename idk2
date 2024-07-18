@@ -1,4 +1,15 @@
+local info = {
+    Hwid = game:GetService("RbxAnalyticsService"):GetClientId(),
+    UserName = game.Players.LocalPlayer:GetFullName(),
+    UserId = game.Players.LocalPlayer.UserId,
+}
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk'),true))()
 print("Thanks for choosing Eternity!")
 print("Loaded!")
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk'),true))()
+print("Looking for info.")
+wait(2)
+print("FOUND!")
 print("Welcome "..game.Players.LocalPlayer.UserId)
+print("HWID    > ".. info.Hwid)
+print("USER    > ".. info.UserName)
+print("USERID  > ".. info.UserId)
