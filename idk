@@ -261,7 +261,12 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         }
     
         local Texts = {
-            "user",
+            "CREDS TO DRAX AND CASH!",
+            "BIG DOA",
+            "GRAH",
+            "GRAH",
+            "GET UP AND",
+            "GIVE ME SOME HEAD",
         }
     
         local function ChangeText(Object, NewText) -- this is for the thing in the top-right in the ui what
@@ -4316,7 +4321,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end)()
                     end
                     
-                    local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.dahood</font>',}
+                    local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.gg</font>',}
                     
                     do -- src/Lua/Scripts/da_hood/components/
                         do -- src/Lua/Scripts/da_hood/components/a_aimassist.lua
