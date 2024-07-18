@@ -1,10 +1,11 @@
-
 local SYC = {
     Modules = {
         UI = {}
     }
 }
 
+-- check if there is no global variable SYC, and if there is none, it will set it to the table above.
+-- erm its basically prefetch ifykyk
 if not getgenv().SYC then
     getgenv().SYC = SYC
 end
@@ -4620,7 +4621,8 @@ local nigga = (function() -- src/Lua/loader.lua
                                 aimassist.jitter.z = value
                             end })
                         end
-                        do --
+                        do -- src/Lua/Scripts/da_hood/components/b_silentaim.lua
+                            -- elegant loves titties!!! if he fucking does not, he is gay. people like me are excluded, sadly.
                             
                             function silentaim:get_position()
                                 local position
@@ -4658,6 +4660,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             	end
                             
                             	if silentaim.custom_calculation then
+                            		-- thanks..
                             		local ping = tonumber(game:GetService("Stats"):FindFirstChild("PerformanceStats").Ping:GetValue())
                             		ping = math.floor(ping)
                             
@@ -5345,7 +5348,7 @@ local nigga = (function() -- src/Lua/loader.lua
                                     indicatorClass.indicate = value
                                 end })
                                 
-                                local title = indicatorClass:new_indicator("Eternity.cash")
+                                local title = indicatorClass:new_indicator("Eternity.gg")
                                 local aim_Ass_character = indicatorClass:new_indicator("no target")
                                 local silent_Ass_character = indicatorClass:new_indicator("no target")
                                 title.changecolor(Color3.fromRGB(170, 170, 255))
@@ -7056,7 +7059,7 @@ local nigga = (function() -- src/Lua/loader.lua
                     end)()
                 end
                 
-                local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.universal</font>',}
+                local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.gg</font>',}
                 
                 do -- src/Lua/Scripts/universal/components/
                     do -- src/Lua/Scripts/universal/components/a_aimassist.lua
@@ -7428,7 +7431,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end })
                         
                         local aim_Ass_character = fucking_shitty_indicator:new_indicator("no target")
-                        local title = fucking_shitty_indicator:new_indicator("Eternity.cash")
+                        local title = fucking_shitty_indicator:new_indicator("Eternity.gg")
                         aim_Ass_character.changecolor(Color3.fromRGB(255,255,255))
                         
                         local randomshit = coroutine.create(function ()
@@ -7442,7 +7445,7 @@ local nigga = (function() -- src/Lua/loader.lua
                     end
                     do -- src/Lua/Scripts/universal/components/c_players.lua
                         local esp = {}
-                        esp.enabled = false
+                        esp.enabled = true
                         
                         esp.maxdist = MathHuge
                         esp.updatespeed = 1
@@ -7461,7 +7464,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         esp.head_dot = false
                         esp.healthbar = false
                         esp.name = false
-                        esp.skeleton = false
+                        esp.skeleton = true
                         
                         esp.oldupdateframe = tick()
                         
