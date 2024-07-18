@@ -1,13 +1,10 @@
-local Player = game.Players.LocalPlayer
-if game.Players.LocalPlayer.UserId == 1809198971 or 
-    game.Players.LocalPlayer.UserId == 2702693297 or
-    game.Players.LocalPlayer.UserId == 1450866368 or
-    game.Players.LocalPlayer.UserId == 4857944072 or
-    game.Players.LocalPlayer.UserId == 2292295149
-    then
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
-    else
-    Player:Kick("Dont waste your time asking for whitelist.")
-    error("!!!Gtfu!!!")
-    return
+local Hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local HT = loadstring(game:HttpGet("https://raw.githubusercontent.com/RayZo1/idk/main/idk4"))()
+
+for i,v in pairs(HT) do
+    if v == Hwid then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
+    elseif v ~= Hwid then
+        game.Players.LocalPlayer:Kick("Hwid is not whitelisted.")
+    end
 end
