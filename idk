@@ -261,7 +261,8 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         }
     
         local Texts = {
-            "user",
+            "CASH",
+            "💸"
         }
     
         local function ChangeText(Object, NewText) -- this is for the thing in the top-right in the ui what
@@ -3376,7 +3377,7 @@ local nigga = (function() -- src/Lua/loader.lua
         MainTitle.BorderSizePixel = 0
         MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-        MainTitle.Text = "Eternity.dahood"
+        MainTitle.Text = "Eternity.gg"
         MainTitle.TextStrokeTransparency = 0
         MainTitle.TextSize = 16
         MainTitle.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
@@ -4316,7 +4317,7 @@ local nigga = (function() -- src/Lua/loader.lua
                         end)()
                     end
                     
-                    local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.dahood</font>',}
+                    local Interface = UserInterface:Create{title = 'Eternity<font color="rgb(168, 157, 159)">.gg</font>',}
                     
                     do -- src/Lua/Scripts/da_hood/components/
                         do -- src/Lua/Scripts/da_hood/components/a_aimassist.lua
