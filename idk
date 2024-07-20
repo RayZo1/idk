@@ -5246,7 +5246,7 @@ local nigga = (function() -- src/Lua/loader.lua
                             
                             do -- indicator
                                 local indicatorClass = {
-                                    enabled = false,
+                                    enabled = true,
                                     center = false,
                                     
                                     position = "mouse",
@@ -6636,8 +6636,8 @@ local nigga = (function() -- src/Lua/loader.lua
                             local settingsTab = Interface:Tab( "settings." )
                             
                             local loading_config = false
-                            local NOTE = settingsTab:Section("TAKE NOTE", "left")
-                            NOTE:Label("THIS SECTION IS STILL IN DEVELOPMENT 🔨")
+                            local NOTE = settingsTab:Section("CASH", "left")
+                            NOTE:Label("🔨")
                             
                             local profiles = settingsTab:Section("configuration", "left")
                             
