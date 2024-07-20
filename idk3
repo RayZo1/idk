@@ -1,10 +1,1 @@
-local Hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local HT = loadstring(game:HttpGet("https://raw.githubusercontent.com/RayZo1/idk/main/idk4"))()
-
-for i,v in pairs(HT) do
-    if v == Hwid then
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
-    elseif v ~= Hwid then
-        game.Players.LocalPlayer:Kick("Hwid is not whitelisted.")
-    end
-end
+print("Eternity Lite is loading..")
