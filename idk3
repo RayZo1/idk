@@ -1,1 +1,2 @@
 print("Eternity Lite is loading..")
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RayZo1/idk/main/idk2'),true))()
